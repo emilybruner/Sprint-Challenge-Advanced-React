@@ -31,7 +31,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <h1>Women's World Cup</h1>
         {this.state.players.map(player => (
           <PlayerCard key={player.id} name={player.name} country={player.country} />
         ))}
