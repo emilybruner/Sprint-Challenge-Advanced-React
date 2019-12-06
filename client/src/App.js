@@ -31,9 +31,11 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        {this.state.players.map(player => (
-          <PlayerCard key={player.id} name={player.name} country={player.country} />
-        ))}
+        <div className="cardscontainer">
+          {this.state.players.map(player => (
+            <PlayerCard key={player.id} name={player.name} country={player.country} />
+          ))}
+        </div>
       </div>
     )
 
