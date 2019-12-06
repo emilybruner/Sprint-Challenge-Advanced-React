@@ -4,12 +4,13 @@ import {
     XAxis,
     YAxis,
     VerticalGridLines,
-    HorizontalGridLines
-} from 'react-vis';
+    HorizontalGridLines,
+    LineSeries
+} from 'vis-react';
 
 const Chart = (props) => {
 
-    const dataArr = props.data.map((d) => {
+    const dataArr = props.players.slice(0, 10).map((d) => {
         return {
             x: d.name + '/' + d.searches,
             y: parseFloat(d.count / 1000)

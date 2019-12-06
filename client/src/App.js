@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import { PlayerCard } from './components/PlayerCard';
 import NavBar from './components/NavBar';
-
+import Chart from './components/Chart';
 
 
 class App extends React.Component {
@@ -33,6 +33,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
+        <Chart />
         <div className="cardscontainer">
           {this.state.players.map(player => (
             <PlayerCard key={player.id} name={player.name} country={player.country} />
