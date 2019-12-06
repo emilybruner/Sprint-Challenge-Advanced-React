@@ -18,3 +18,8 @@ test('Players are defined', () => {
   expect(players).not.toBeUndefined();
   expect(players).not.toBeFalsy;
 });
+
+test('Homepage title works', () => {
+  const { getByText } = render(<App />);
+  getByText(/Women's World Cup Players/i);
+});
